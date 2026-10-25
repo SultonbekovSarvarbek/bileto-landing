@@ -181,3 +181,7 @@ footer { border-top: 1px solid var(--border); padding: 32px 0 48px; color: var(-
 .doc p, .doc li { color: #c9cdd6; }
 .doc strong { color: var(--text); }
 .doc ul { padding-left: 22px; }
+
+.final .tg-note { margin: 28px auto 12px; font-size: 15px; }
+.btn-tg { background: #229ed9; color: #fff; }
+.btn-tg:hover { filter: brightness(1.08); }
