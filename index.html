@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bileto — билеты от людей на раскупленные события</title>
+<meta name="description" content="Bileto — площадка для перепродажи билетов на концерты, спектакли и матчи в Узбекистане. Каждую сделку проверяет оператор.">
+<meta name="theme-color" content="#0e0f13">
+<meta property="og:title" content="Bileto — билеты от людей">
+<meta property="og:description" content="Купите билет на раскупленное событие или продайте лишний. Каждую сделку проверяет оператор Bileto.">
+<meta property="og:image" content="assets/icon.png">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/logo-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav"><div class="wrap nav-in">
+  <a class="brand" href="#"><img src="assets/logo-256.png" alt="" width="32" height="32">Bileto</a>
+  <nav class="nav-links">
+    <a href="#how" data-i18n="navHow">Как это работает</a>
+    <a href="#sell" data-i18n="navSell">Продавцам</a>
+    <a href="#faq" data-i18n="navFaq">Вопросы</a>
+  </nav>
+  <div class="langs" role="group" aria-label="Language">
+    <button data-lang="ru">RU</button><button data-lang="uz">UZ</button><button data-lang="en">EN</button>
+  </div>
+</div></header>
+
+<main>
+<div class="hero"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow" data-i18n="eyebrow">🎟 Перепродажа билетов в Узбекистане</span>
+    <h1 data-i18n-html="h1">Не успели купить? <em>Билеты от людей</em> — на Bileto</h1>
+    <p class="lead" data-i18n="lead">Концерты, спектакли, матчи и стендап — даже когда в кассе sold out. Продавайте лишние билеты за пару минут. Каждую сделку проверяет оператор Bileto.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#download">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.1-.8 1.5 0 1.9.8 3.2.8s2.1-1.2 2.9-2.4c.9-1.4 1.3-2.7 1.3-2.8-.1 0-2.4-.9-2.4-3.9zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.1-.6 2.8-1.4z"/></svg>
+        <span class="store"><small data-i18n="soon">Скоро в</small>App Store</span>
+      </a>
+      <a class="btn btn-ghost" href="#download">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.3v16.8c0 .5.1 1 .4 1.3l9.4-9.7-9.4-9.7zm10.5 10.8 2.9 3-11.6 6.6c-.5.3-1 .3-1.3.1l10-9.7zm4.2-4.2 3 1.7c.9.5.9 1.4 0 1.9l-3 1.7-3.2-3.3 3.2-2zM4.4 1.6c.4-.2.8-.2 1.3.1L17.3 8.3l-3.2 3.3-9.7-10z"/></svg>
+        <span class="store"><small data-i18n="soon">Скоро в</small>Google Play</span>
+      </a>
+    </div>
+    <p class="cta-note" data-i18n="ctaNote">Регистрация без SMS — только имя и номер телефона</p>
+  </div>
+
+  <div class="phone" aria-hidden="true">
+    <div class="ph-top"><img src="assets/logo-256.png" alt="">Bileto</div>
+    <div class="ph-search" data-i18n="phSearch">Название, сектор или площадка</div>
+    <div class="ph-card"><img src="assets/covers/pop.jpg" alt=""><div><i data-i18n="phFrom1">от 450 000</i><b data-i18n="phCard1">Поп-концерт</b><span data-i18n="phMeta1">Ташкент · 3 предл.</span></div></div>
+    <div class="ph-card"><img src="assets/covers/theatre.jpg" alt=""><div><i data-i18n="phFrom2">от 180 000</i><b data-i18n="phCard2">Балет</b><span data-i18n="phMeta2">Ташкент · 5 предл.</span></div></div>
+    <div class="ph-card"><img src="assets/covers/football.jpg" alt=""><div><i data-i18n="phFrom3">от 120 000</i><b data-i18n="phCard3">Футбол</b><span data-i18n="phMeta3">Ташкент · 8 предл.</span></div></div>
+  </div>
+</div></div>
+
+<section id="how"><div class="wrap">
+  <div class="sec-head">
+    <h2 data-i18n="howTitle">Как проходит покупка</h2>
+    <p data-i18n="howText">Никаких переводов незнакомцам наугад — всё через оператора Bileto.</p>
+  </div>
+  <div class="steps">
+    <div class="step"><h3 data-i18n="s1t">Найдите билет</h3><p data-i18n="s1p">Выберите событие и предложение по сектору, ряду и цене. Цена в кассе показана рядом — для сравнения.</p></div>
+    <div class="step"><h3 data-i18n="s2t">Оставьте заявку</h3><p data-i18n="s2p">Укажите имя и номер телефона. Номер продавца скрыт — связь идёт через оператора.</p></div>
+    <div class="step"><h3 data-i18n="s3t">Оператор всё проверит</h3><p data-i18n="s3p">Оператор позвонит, проверит билет, договорится с продавцом и организует передачу. Оплата — после звонка.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head">
+    <h2 data-i18n="evTitle">Всё, на что раскупают билеты</h2>
+    <p data-i18n="evText">Ташкент, Самарканд, Бухара и другие города.</p>
+  </div>
+  <div class="events">
+    <div class="ev"><img src="assets/covers/pop.jpg" alt="" loading="lazy"><span data-i18n="ev1">Концерты</span></div>
+    <div class="ev"><img src="assets/covers/theatre.jpg" alt="" loading="lazy"><span data-i18n="ev2">Театр и балет</span></div>
+    <div class="ev"><img src="assets/covers/football.jpg" alt="" loading="lazy"><span data-i18n="ev3">Спорт</span></div>
+    <div class="ev"><img src="assets/covers/standup.jpg" alt="" loading="lazy"><span data-i18n="ev4">Стендап</span></div>
+    <div class="ev"><img src="assets/covers/orchestra.jpg" alt="" loading="lazy"><span data-i18n="ev5">Классика</span></div>
+    <div class="ev"><img src="assets/covers/festival.jpg" alt="" loading="lazy"><span data-i18n="ev6">Фестивали</span></div>
+  </div>
+</div></section>
+
+<section id="sell"><div class="wrap">
+  <div class="sec-head">
+    <h2 data-i18n="sellTitle">Не можете пойти? Продайте билет</h2>
+    <p data-i18n="sellText">Тем, кто не успел купить. Объявление — за пару минут, покупателей найдёт оператор.</p>
+  </div>
+  <div class="split">
+    <div class="panel">
+      <h3 data-i18n="sellHow">Как продать</h3>
+      <ul class="checks">
+        <li data-i18n="c1">Зарегистрируйтесь с ролью «продавец» — это бесплатно</li>
+        <li data-i18n="c2">Загрузите фото билета — его видит только модератор, QR-код можно закрыть</li>
+        <li data-i18n="c3">Укажите сектор, количество, цену и способ передачи: доставка или самовывоз</li>
+        <li data-i18n="c4">Когда придёт заявка, оператор Bileto свяжется с вами</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3 data-i18n="feeTitle">Честные условия</h3>
+      <div class="fees">
+        <div class="fee"><b>0</b><span data-i18n="fee0">за размещение объявления</span></div>
+        <div class="fee"><b>10%</b><span data-i18n="fee1">комиссия Bileto с проданного билета</span></div>
+        <div class="fee"><b>7%</b><span data-i18n="fee2">сервисный сбор с покупателя</span></div>
+      </div>
+      <p class="cta-note" data-i18n="feeNote">Комиссию платите, только если билет продан. Сумму к получению видно сразу при создании объявления.</p>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="sec-head"><h2 data-i18n="trustTitle">Почему Bileto</h2></div>
+  <div class="trust">
+    <div><div class="ic">🛡</div><h3 data-i18n="t1t">Каждая сделка под контролем</h3><p data-i18n="t1p">Оператор проверяет билет до оплаты и сопровождает передачу.</p></div>
+    <div><div class="ic">🔒</div><h3 data-i18n="t2t">Номера скрыты</h3><p data-i18n="t2p">Покупатель и продавец не видят телефоны друг друга — связь только через Bileto.</p></div>
+    <div><div class="ic">✅</div><h3 data-i18n="t3t">Проверенные продавцы</h3><p data-i18n="t3p">Продавцы подтверждают личность и получают значок «Проверен».</p></div>
+  </div>
+</div></section>
+
+<section id="faq"><div class="wrap">
+  <div class="sec-head"><h2 data-i18n="faqTitle">Частые вопросы</h2></div>
+  <div class="faq">
+    <details><summary data-i18n="q1">Как оплатить билет?</summary><p data-i18n="a1">Оплата — вне приложения, после звонка оператора. Он сообщит сумму и способ оплаты.</p></details>
+    <details><summary data-i18n="q2">Сколько стоит покупка?</summary><p data-i18n="a2">Цена билета, которую указал продавец, плюс сервисный сбор 7%. Итоговая сумма видна до отправки заявки.</p></details>
+    <details><summary data-i18n="q3">Как билет проверяют?</summary><p data-i18n="a3">Продавец загружает фото билета для модератора, а оператор проверяет билет по каждой заявке до оплаты.</p></details>
+    <details><summary data-i18n="q4">Нужно ли подтверждать номер по SMS?</summary><p data-i18n="a4">Нет. Для регистрации достаточно имени, номера телефона и роли — покупатель или продавец.</p></details>
+    <details><summary data-i18n="q5">Что если событие отменят?</summary><p data-i18n="a5">За проведение, перенос и отмену мероприятия отвечает организатор. Подробности — в пользовательском соглашении.</p></details>
+  </div>
+</div></section>
+
+<section id="download" class="final"><div class="wrap">
+  <div class="panel">
+    <img src="assets/logo-256.png" alt="">
+    <h2 data-i18n="finalTitle">Bileto скоро в App Store и Google Play</h2>
+    <p data-i18n="finalText">Приложение готовится к запуску. Покупайте билеты на раскупленные события и продавайте лишние — безопасно.</p>
+    <div class="cta-row">
+      <span class="btn btn-primary"><span class="store"><small data-i18n="soon">Скоро в</small>App Store</span></span>
+      <span class="btn btn-ghost"><span class="store"><small data-i18n="soon">Скоро в</small>Google Play</span></span>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <span>© <span id="year">2026</span> Bileto</span>
+    <span class="sp"></span>
+    <a data-legal="terms" href="legal/terms.ru.html" data-i18n="terms">Пользовательское соглашение</a>
+    <a data-legal="privacy" href="legal/privacy.ru.html" data-i18n="privacy">Политика конфиденциальности</a>
+  </div>
+  <p class="credits" data-i18n="credits">Фото: Wikimedia Commons, rawpixel, StockSnap (CC0).</p>
+</div></footer>
+
+<script src="i18n.js"></script>
+</body>
+</html>

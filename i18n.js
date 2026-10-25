@@ -1,0 +1,112 @@
+// Русский текст лежит прямо в index.html; здесь — переводы на узбекский (кириллица, как в приложении) и английский.
+const DICT = {
+  uz: {
+    title: 'Bileto — сотилиб кетган тадбирларга одамлардан чипталар',
+    navHow: 'Қандай ишлайди', navSell: 'Сотувчиларга', navFaq: 'Саволлар',
+    eyebrow: '🎟 Ўзбекистонда чипталарни қайта сотиш',
+    h1: 'Сотиб олишга улгурмадингизми? <em>Одамлардан чипталар</em> — Bileto’да',
+    lead: 'Концертлар, спектакллар, матчлар ва стендап — кассада sold out бўлса ҳам. Ортиқча чиптани бир неча дақиқада сотинг. Ҳар бир битимни Bileto оператори текширади.',
+    soon: 'Тез орада', ctaNote: 'SMS’сиз рўйхатдан ўтиш — фақат исм ва телефон рақами',
+    phSearch: 'Ном, сектор ёки майдон',
+    phFrom1: '450 000 дан', phFrom2: '180 000 дан', phFrom3: '120 000 дан',
+    phCard1: 'Поп-концерт', phCard2: 'Балет', phCard3: 'Футбол',
+    phMeta1: 'Тошкент · 3 таклиф', phMeta2: 'Тошкент · 5 таклиф', phMeta3: 'Тошкент · 8 таклиф',
+    howTitle: 'Харид қандай ўтади', howText: 'Нотаниш одамларга тасодифий ўтказмалар йўқ — ҳаммаси Bileto оператори орқали.',
+    s1t: 'Чиптани топинг', s1p: 'Тадбирни ва сектор, қатор ва нарх бўйича таклифни танланг. Кассадаги нарх солиштириш учун ёнида кўрсатилган.',
+    s2t: 'Ариза қолдиринг', s2p: 'Исм ва телефон рақамингизни киритинг. Сотувчининг рақами яширин — алоқа оператор орқали.',
+    s3t: 'Оператор ҳаммасини текширади', s3p: 'Оператор қўнғироқ қилади, чиптани текширади, сотувчи билан келишади ва топширишни ташкил қилади. Тўлов — қўнғироқдан кейин.',
+    evTitle: 'Чипталари тез сотиладиган ҳамма нарса', evText: 'Тошкент, Самарқанд, Бухоро ва бошқа шаҳарлар.',
+    ev1: 'Концертлар', ev2: 'Театр ва балет', ev3: 'Спорт', ev4: 'Стендап', ev5: 'Классика', ev6: 'Фестиваллар',
+    sellTitle: 'Бора олмайсизми? Чиптани сотинг', sellText: 'Сотиб олишга улгурмаганларга. Эълон — бир неча дақиқада, харидорни оператор топади.',
+    sellHow: 'Қандай сотиш мумкин',
+    c1: '«Сотувчи» роли билан рўйхатдан ўтинг — бу бепул',
+    c2: 'Чипта расмини юкланг — уни фақат модератор кўради, QR-кодни ёпиш мумкин',
+    c3: 'Сектор, сони, нарх ва топшириш усулини кўрсатинг: етказиб бериш ёки олиб кетиш',
+    c4: 'Ариза келганда Bileto оператори сиз билан боғланади',
+    feeTitle: 'Ҳалол шартлар', fee0: 'эълон жойлаштириш учун', fee1: 'сотилган чиптадан Bileto комиссияси', fee2: 'харидордан хизмат йиғими',
+    feeNote: 'Комиссия фақат чипта сотилганда тўланади. Олинадиган сумма эълон яратишда дарҳол кўринади.',
+    trustTitle: 'Нега Bileto',
+    t1t: 'Ҳар бир битим назорат остида', t1p: 'Оператор тўловдан олдин чиптани текширади ва топширишни кузатиб боради.',
+    t2t: 'Рақамлар яширин', t2p: 'Харидор ва сотувчи бир-бирининг телефонини кўрмайди — алоқа фақат Bileto орқали.',
+    t3t: 'Текширилган сотувчилар', t3p: 'Сотувчилар шахсини тасдиқлайди ва «Текширилган» белгисини олади.',
+    faqTitle: 'Кўп бериладиган саволлар',
+    q1: 'Чипта учун қандай тўланади?', a1: 'Тўлов илова ташқарисида, оператор қўнғироғидан кейин. У сумма ва тўлов усулини айтади.',
+    q2: 'Харид қанча туради?', a2: 'Сотувчи кўрсатган чипта нархи ва 7% хизмат йиғими. Якуний сумма ариза юборишдан олдин кўринади.',
+    q3: 'Чипта қандай текширилади?', a3: 'Сотувчи модератор учун чипта расмини юклайди, оператор эса ҳар бир аризада тўловдан олдин чиптани текширади.',
+    q4: 'Рақамни SMS орқали тасдиқлаш керакми?', a4: 'Йўқ. Рўйхатдан ўтиш учун исм, телефон рақами ва рол — харидор ёки сотувчи етарли.',
+    q5: 'Тадбир бекор қилинса-чи?', a5: 'Тадбирни ўтказиш, кўчириш ва бекор қилиш учун ташкилотчи жавобгар. Батафсил — фойдаланувчи келишувида.',
+    finalTitle: 'Bileto тез орада App Store ва Google Play’да', finalText: 'Илова ишга туширишга тайёрланмоқда. Сотилиб кетган тадбирларга чипта олинг ва ортиқчасини сотинг — хавфсиз.',
+    terms: 'Фойдаланувчи келишуви', privacy: 'Махфийлик сиёсати',
+    credits: 'Расмлар: Wikimedia Commons, rawpixel, StockSnap (CC0).',
+  },
+  en: {
+    title: 'Bileto — tickets from people for sold-out events',
+    navHow: 'How it works', navSell: 'For sellers', navFaq: 'FAQ',
+    eyebrow: '🎟 Ticket resale in Uzbekistan',
+    h1: 'Missed out? <em>Tickets from people</em> — on Bileto',
+    lead: 'Concerts, theatre, matches and stand-up — even when the box office is sold out. Sell spare tickets in a couple of minutes. Every deal is checked by a Bileto operator.',
+    soon: 'Coming soon to', ctaNote: 'No SMS sign-up — just your name and phone number',
+    phSearch: 'Title, sector or venue',
+    phFrom1: 'from 450 000', phFrom2: 'from 180 000', phFrom3: 'from 120 000',
+    phCard1: 'Pop concert', phCard2: 'Ballet', phCard3: 'Football',
+    phMeta1: 'Tashkent · 3 offers', phMeta2: 'Tashkent · 5 offers', phMeta3: 'Tashkent · 8 offers',
+    howTitle: 'How buying works', howText: 'No random transfers to strangers — everything goes through a Bileto operator.',
+    s1t: 'Find a ticket', s1p: 'Pick an event and an offer by sector, row and price. The box office price is shown alongside for comparison.',
+    s2t: 'Send a request', s2p: 'Enter your name and phone number. The seller’s number stays hidden — you talk through the operator.',
+    s3t: 'The operator checks everything', s3p: 'The operator calls you, checks the ticket, arranges the deal with the seller and the handover. You pay after the call.',
+    evTitle: 'Everything that sells out', evText: 'Tashkent, Samarkand, Bukhara and other cities.',
+    ev1: 'Concerts', ev2: 'Theatre & ballet', ev3: 'Sports', ev4: 'Stand-up', ev5: 'Classical', ev6: 'Festivals',
+    sellTitle: 'Can’t go? Sell your ticket', sellText: 'To people who missed out. Listing takes a couple of minutes — the operator finds the buyer.',
+    sellHow: 'How to sell',
+    c1: 'Sign up as a seller — it’s free',
+    c2: 'Upload a photo of the ticket — only the moderator sees it, and you can cover the QR code',
+    c3: 'Set the sector, quantity, price and handover: delivery or pickup',
+    c4: 'When a request comes in, a Bileto operator contacts you',
+    feeTitle: 'Fair terms', fee0: 'to post a listing', fee1: 'Bileto commission per ticket sold', fee2: 'service fee paid by the buyer',
+    feeNote: 'You only pay commission when a ticket sells. Your payout is shown as you create the listing.',
+    trustTitle: 'Why Bileto',
+    t1t: 'Every deal is monitored', t1p: 'The operator checks the ticket before payment and oversees the handover.',
+    t2t: 'Numbers stay hidden', t2p: 'Buyers and sellers never see each other’s phone numbers — all contact goes through Bileto.',
+    t3t: 'Verified sellers', t3p: 'Sellers confirm their identity and earn a “Verified” badge.',
+    faqTitle: 'FAQ',
+    q1: 'How do I pay?', a1: 'Payment happens outside the app, after the operator’s call. They’ll tell you the amount and payment method.',
+    q2: 'How much does it cost?', a2: 'The seller’s ticket price plus a 7% service fee. You see the total before sending the request.',
+    q3: 'How are tickets checked?', a3: 'Sellers upload a ticket photo for the moderator, and the operator checks the ticket on every request before payment.',
+    q4: 'Do I need to confirm my number by SMS?', a4: 'No. To sign up you only need a name, phone number and role — buyer or seller.',
+    q5: 'What if the event is cancelled?', a5: 'The organiser is responsible for holding, rescheduling or cancelling the event. See the Terms of Use for details.',
+    finalTitle: 'Bileto is coming to the App Store and Google Play', finalText: 'The app is getting ready for launch. Buy tickets to sold-out events and sell your spare ones — safely.',
+    terms: 'Terms of Use', privacy: 'Privacy Policy',
+    credits: 'Photos: Wikimedia Commons, rawpixel, StockSnap (CC0).',
+  },
+};
+
+(function () {
+  const LANGS = ['ru', 'uz', 'en'];
+  const ru = { title: document.title };
+  document.querySelectorAll('[data-i18n]').forEach((el) => (ru[el.dataset.i18n] = el.textContent));
+  document.querySelectorAll('[data-i18n-html]').forEach((el) => (ru[el.dataset.i18nHtml] = el.innerHTML));
+  DICT.ru = ru;
+
+  function apply(lang) {
+    const d = DICT[lang];
+    document.documentElement.lang = lang;
+    document.title = d.title;
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      if (d[el.dataset.i18n] != null) el.textContent = d[el.dataset.i18n];
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach((el) => (el.innerHTML = d[el.dataset.i18nHtml]));
+    document.querySelectorAll('[data-legal]').forEach((a) => (a.href = `legal/${a.dataset.legal}.${lang}.html`));
+    document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+
+  let initial = new URLSearchParams(location.search).get('lang');
+  if (!LANGS.includes(initial)) {
+    try { initial = localStorage.getItem('lang'); } catch (e) {}
+  }
+  if (!LANGS.includes(initial)) initial = (navigator.language || '').startsWith('uz') ? 'uz' : (navigator.language || '').startsWith('en') ? 'en' : 'ru';
+  apply(initial);
+
+  document.querySelectorAll('[data-lang]').forEach((b) => b.addEventListener('click', () => apply(b.dataset.lang)));
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
