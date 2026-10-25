@@ -1,7 +1,18 @@
-// Русский текст лежит прямо в index.html; здесь — переводы на узбекский (кириллица, как в приложении) и английский.
-const DICT = {
+// Переводы лендинга. Русский текст лежит в разметке src/index.html, здесь — только его мета-теги; узбекский (кириллица, как в приложении) и английский — полностью.
+export const DICT = {
+  ru: {
+    title: 'Bileto — купить и продать билеты на концерты в Ташкенте и Узбекистане',
+    description: 'Билеты от людей на раскупленные концерты, спектакли и матчи в Ташкенте, Самарканде и Бухаре. Продайте лишний билет за пару минут — каждую сделку проверяет оператор Bileto.',
+    ogTitle: 'Bileto — билеты от людей',
+    ogTag: 'Билеты на раскупленные события',
+    ogSub: 'Купить и продать — каждую сделку проверяет оператор',
+  },
   uz: {
-    title: 'Bileto — сотилиб кетган тадбирларга одамлардан чипталар',
+    title: 'Bileto — Тошкент ва Ўзбекистонда концерт чипталарини сотиб олиш ва сотиш',
+    description: 'Сотилиб кетган концертлар, спектакллар ва матчларга одамлардан чипталар — Тошкент, Самарқанд, Бухоро. Ортиқча чиптани бир неча дақиқада сотинг — ҳар бир битимни Bileto оператори текширади.',
+    ogTitle: 'Bileto — одамлардан чипталар',
+    ogTag: 'Сотилиб кетган тадбирларга чипталар',
+    ogSub: 'Сотиб олинг ва сотинг — ҳар бир битимни оператор текширади',
     navHow: 'Қандай ишлайди', navSell: 'Сотувчиларга', navFaq: 'Саволлар',
     eyebrow: '🎟 Ўзбекистонда чипталарни қайта сотиш',
     h1: 'Сотиб олишга улгурмадингизми? <em>Одамлардан чипталар</em> — Bileto’да',
@@ -41,7 +52,11 @@ const DICT = {
     credits: 'Расмлар: Wikimedia Commons, rawpixel, StockSnap (CC0).',
   },
   en: {
-    title: 'Bileto — tickets from people for sold-out events',
+    title: 'Bileto — buy and sell concert tickets in Tashkent and Uzbekistan',
+    description: 'Tickets from people for sold-out concerts, theatre and matches in Tashkent, Samarkand and Bukhara. Sell a spare ticket in minutes — every deal is checked by a Bileto operator.',
+    ogTitle: 'Bileto — tickets from people',
+    ogTag: 'Tickets to sold-out events',
+    ogSub: 'Buy and sell — every deal is checked by an operator',
     navHow: 'How it works', navSell: 'For sellers', navFaq: 'FAQ',
     eyebrow: '🎟 Ticket resale in Uzbekistan',
     h1: 'Missed out? <em>Tickets from people</em> — on Bileto',
@@ -81,34 +96,3 @@ const DICT = {
     credits: 'Photos: Wikimedia Commons, rawpixel, StockSnap (CC0).',
   },
 };
-
-(function () {
-  const LANGS = ['ru', 'uz', 'en'];
-  const ru = { title: document.title };
-  document.querySelectorAll('[data-i18n]').forEach((el) => (ru[el.dataset.i18n] = el.textContent));
-  document.querySelectorAll('[data-i18n-html]').forEach((el) => (ru[el.dataset.i18nHtml] = el.innerHTML));
-  DICT.ru = ru;
-
-  function apply(lang) {
-    const d = DICT[lang];
-    document.documentElement.lang = lang;
-    document.title = d.title;
-    document.querySelectorAll('[data-i18n]').forEach((el) => {
-      if (d[el.dataset.i18n] != null) el.textContent = d[el.dataset.i18n];
-    });
-    document.querySelectorAll('[data-i18n-html]').forEach((el) => (el.innerHTML = d[el.dataset.i18nHtml]));
-    document.querySelectorAll('[data-legal]').forEach((a) => (a.href = `legal/${a.dataset.legal}.${lang}.html`));
-    document.querySelectorAll('[data-lang]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
-    try { localStorage.setItem('lang', lang); } catch (e) {}
-  }
-
-  let initial = new URLSearchParams(location.search).get('lang');
-  if (!LANGS.includes(initial)) {
-    try { initial = localStorage.getItem('lang'); } catch (e) {}
-  }
-  if (!LANGS.includes(initial)) initial = (navigator.language || '').startsWith('uz') ? 'uz' : (navigator.language || '').startsWith('en') ? 'en' : 'ru';
-  apply(initial);
-
-  document.querySelectorAll('[data-lang]').forEach((b) => b.addEventListener('click', () => apply(b.dataset.lang)));
-  document.getElementById('year').textContent = new Date().getFullYear();
-})();

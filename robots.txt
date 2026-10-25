@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sultonbekovsarvarbek.github.io/bileto-landing/sitemap.xml

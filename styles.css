@@ -95,7 +95,7 @@ h1, h2, h3 { line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
 .ph-top img { width: 26px; height: 26px; border-radius: 7px; }
 .ph-search { background: var(--surface2); border-radius: 12px; padding: 10px 12px; font-size: 12px; color: var(--muted); }
 .ph-card { border-radius: 16px; overflow: hidden; background: var(--surface); border: 1px solid var(--border); flex: none; }
-.ph-card img { aspect-ratio: 16 / 8; object-fit: cover; width: 100%; }
+.ph-card img { aspect-ratio: 16 / 8; object-fit: cover; width: 100%; height: auto; }
 .ph-card div { padding: 9px 12px 11px; }
 .ph-card b { display: block; font-size: 13px; }
 .ph-card span { font-size: 11px; color: var(--dim); }

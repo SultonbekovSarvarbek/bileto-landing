@@ -3,12 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bileto — билеты от людей на раскупленные события</title>
-<meta name="description" content="Bileto — площадка для перепродажи билетов на концерты, спектакли и матчи в Узбекистане. Каждую сделку проверяет оператор.">
-<meta name="theme-color" content="#0e0f13">
+<title>Bileto — купить и продать билеты на концерты в Ташкенте и Узбекистане</title>
+<meta name="description" content="Билеты от людей на раскупленные концерты, спектакли и матчи в Ташкенте, Самарканде и Бухаре. Продайте лишний билет за пару минут — каждую сделку проверяет оператор Bileto.">
+<link rel="canonical" href="https://sultonbekovsarvarbek.github.io/bileto-landing/">
+<link rel="alternate" hreflang="ru" href="https://sultonbekovsarvarbek.github.io/bileto-landing/">
+<link rel="alternate" hreflang="uz" href="https://sultonbekovsarvarbek.github.io/bileto-landing/uz/">
+<link rel="alternate" hreflang="en" href="https://sultonbekovsarvarbek.github.io/bileto-landing/en/">
+<link rel="alternate" hreflang="x-default" href="https://sultonbekovsarvarbek.github.io/bileto-landing/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Bileto">
+<meta property="og:url" content="https://sultonbekovsarvarbek.github.io/bileto-landing/">
 <meta property="og:title" content="Bileto — билеты от людей">
-<meta property="og:description" content="Купите билет на раскупленное событие или продайте лишний. Каждую сделку проверяет оператор Bileto.">
-<meta property="og:image" content="assets/icon.png">
+<meta property="og:description" content="Билеты от людей на раскупленные концерты, спектакли и матчи в Ташкенте, Самарканде и Бухаре. Продайте лишний билет за пару минут — каждую сделку проверяет оператор Bileto.">
+<meta property="og:image" content="https://sultonbekovsarvarbek.github.io/bileto-landing/assets/og-ru.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="uz_UZ">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://sultonbekovsarvarbek.github.io/bileto-landing/#org","name":"Bileto","url":"https://sultonbekovsarvarbek.github.io/bileto-landing/","logo":"https://sultonbekovsarvarbek.github.io/bileto-landing/assets/icon.png","sameAs":["https://t.me/bileto_uz"]},{"@type":"WebSite","@id":"https://sultonbekovsarvarbek.github.io/bileto-landing/#website","name":"Bileto","url":"https://sultonbekovsarvarbek.github.io/bileto-landing/","inLanguage":["ru","uz","en"],"publisher":{"@id":"https://sultonbekovsarvarbek.github.io/bileto-landing/#org"}},{"@type":"WebPage","url":"https://sultonbekovsarvarbek.github.io/bileto-landing/","name":"Bileto — купить и продать билеты на концерты в Ташкенте и Узбекистане","description":"Билеты от людей на раскупленные концерты, спектакли и матчи в Ташкенте, Самарканде и Бухаре. Продайте лишний билет за пару минут — каждую сделку проверяет оператор Bileto.","inLanguage":"ru","isPartOf":{"@id":"https://sultonbekovsarvarbek.github.io/bileto-landing/#website"}},{"@type":"FAQPage","inLanguage":"ru","mainEntity":[{"@type":"Question","name":"Как оплатить билет?","acceptedAnswer":{"@type":"Answer","text":"Оплата — вне приложения, после звонка оператора. Он сообщит сумму и способ оплаты."}},{"@type":"Question","name":"Сколько стоит покупка?","acceptedAnswer":{"@type":"Answer","text":"Цена билета, которую указал продавец, плюс сервисный сбор 7%. Итоговая сумма видна до отправки заявки."}},{"@type":"Question","name":"Как билет проверяют?","acceptedAnswer":{"@type":"Answer","text":"Продавец загружает фото билета для модератора, а оператор проверяет билет по каждой заявке до оплаты."}},{"@type":"Question","name":"Нужно ли подтверждать номер по SMS?","acceptedAnswer":{"@type":"Answer","text":"Нет. Для регистрации достаточно имени, номера телефона и роли — покупатель или продавец."}},{"@type":"Question","name":"Что если событие отменят?","acceptedAnswer":{"@type":"Answer","text":"За проведение, перенос и отмену мероприятия отвечает организатор. Подробности — в пользовательском соглашении."}}]}]}</script>
+<meta name="theme-color" content="#0e0f13">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/logo-256.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,15 +34,13 @@
 <body>
 
 <header class="nav"><div class="wrap nav-in">
-  <a class="brand" href="#"><img src="assets/logo-256.png" alt="" width="32" height="32">Bileto</a>
+  <a class="brand" href="./"><img src="assets/logo-256.png" alt="" width="32" height="32">Bileto</a>
   <nav class="nav-links">
     <a href="#how" data-i18n="navHow">Как это работает</a>
     <a href="#sell" data-i18n="navSell">Продавцам</a>
     <a href="#faq" data-i18n="navFaq">Вопросы</a>
   </nav>
-  <div class="langs" role="group" aria-label="Language">
-    <button data-lang="ru">RU</button><button data-lang="uz">UZ</button><button data-lang="en">EN</button>
-  </div>
+  <nav class="langs" aria-label="Language"><a href="./" hreflang="ru" lang="ru" aria-current="page">RU</a><a href="uz/" hreflang="uz" lang="uz">UZ</a><a href="en/" hreflang="en" lang="en">EN</a></nav>
 </div></header>
 
 <main>
@@ -50,11 +63,11 @@
   </div>
 
   <div class="phone" aria-hidden="true">
-    <div class="ph-top"><img src="assets/logo-256.png" alt="">Bileto</div>
+    <div class="ph-top"><img src="assets/logo-256.png" alt="" width="26" height="26">Bileto</div>
     <div class="ph-search" data-i18n="phSearch">Название, сектор или площадка</div>
-    <div class="ph-card"><img src="assets/covers/pop.jpg" alt=""><div><i data-i18n="phFrom1">от 450 000</i><b data-i18n="phCard1">Поп-концерт</b><span data-i18n="phMeta1">Ташкент · 3 предл.</span></div></div>
-    <div class="ph-card"><img src="assets/covers/theatre.jpg" alt=""><div><i data-i18n="phFrom2">от 180 000</i><b data-i18n="phCard2">Балет</b><span data-i18n="phMeta2">Ташкент · 5 предл.</span></div></div>
-    <div class="ph-card"><img src="assets/covers/football.jpg" alt=""><div><i data-i18n="phFrom3">от 120 000</i><b data-i18n="phCard3">Футбол</b><span data-i18n="phMeta3">Ташкент · 8 предл.</span></div></div>
+    <div class="ph-card"><img src="assets/covers/pop.jpg" alt="" width="800" height="450"><div><i data-i18n="phFrom1">от 450 000</i><b data-i18n="phCard1">Поп-концерт</b><span data-i18n="phMeta1">Ташкент · 3 предл.</span></div></div>
+    <div class="ph-card"><img src="assets/covers/theatre.jpg" alt="" width="800" height="450"><div><i data-i18n="phFrom2">от 180 000</i><b data-i18n="phCard2">Балет</b><span data-i18n="phMeta2">Ташкент · 5 предл.</span></div></div>
+    <div class="ph-card"><img src="assets/covers/football.jpg" alt="" width="800" height="450"><div><i data-i18n="phFrom3">от 120 000</i><b data-i18n="phCard3">Футбол</b><span data-i18n="phMeta3">Ташкент · 8 предл.</span></div></div>
   </div>
 </div></div>
 
@@ -76,12 +89,12 @@
     <p data-i18n="evText">Ташкент, Самарканд, Бухара и другие города.</p>
   </div>
   <div class="events">
-    <div class="ev"><img src="assets/covers/pop.jpg" alt="" loading="lazy"><span data-i18n="ev1">Концерты</span></div>
-    <div class="ev"><img src="assets/covers/theatre.jpg" alt="" loading="lazy"><span data-i18n="ev2">Театр и балет</span></div>
-    <div class="ev"><img src="assets/covers/football.jpg" alt="" loading="lazy"><span data-i18n="ev3">Спорт</span></div>
-    <div class="ev"><img src="assets/covers/standup.jpg" alt="" loading="lazy"><span data-i18n="ev4">Стендап</span></div>
-    <div class="ev"><img src="assets/covers/orchestra.jpg" alt="" loading="lazy"><span data-i18n="ev5">Классика</span></div>
-    <div class="ev"><img src="assets/covers/festival.jpg" alt="" loading="lazy"><span data-i18n="ev6">Фестивали</span></div>
+    <div class="ev"><img src="assets/covers/pop.jpg" alt="" width="800" height="450" loading="lazy" decoding="async"><span data-i18n="ev1">Концерты</span></div>
+    <div class="ev"><img src="assets/covers/theatre.jpg" alt="" width="800" height="450" loading="lazy" decoding="async"><span data-i18n="ev2">Театр и балет</span></div>
+    <div class="ev"><img src="assets/covers/football.jpg" alt="" width="800" height="450" loading="lazy" decoding="async"><span data-i18n="ev3">Спорт</span></div>
+    <div class="ev"><img src="assets/covers/standup.jpg" alt="" width="800" height="450" loading="lazy" decoding="async"><span data-i18n="ev4">Стендап</span></div>
+    <div class="ev"><img src="assets/covers/orchestra.jpg" alt="" width="800" height="450" loading="lazy" decoding="async"><span data-i18n="ev5">Классика</span></div>
+    <div class="ev"><img src="assets/covers/festival.jpg" alt="" width="800" height="450" loading="lazy" decoding="async"><span data-i18n="ev6">Фестивали</span></div>
   </div>
 </div></section>
 
@@ -134,7 +147,7 @@
 
 <section id="download" class="final"><div class="wrap">
   <div class="panel">
-    <img src="assets/logo-256.png" alt="">
+    <img src="assets/logo-256.png" alt="Bileto" width="72" height="72" loading="lazy">
     <h2 data-i18n="finalTitle">Bileto скоро в App Store и Google Play</h2>
     <p data-i18n="finalText">Приложение готовится к запуску. Покупайте билеты на раскупленные события и продавайте лишние — безопасно.</p>
     <div class="cta-row">
@@ -152,15 +165,14 @@
 
 <footer><div class="wrap">
   <div class="foot">
-    <span>© <span id="year">2026</span> Bileto</span>
+    <span>© 2026 Bileto</span>
     <span class="sp"></span>
     <a href="https://t.me/bileto_uz" target="_blank" rel="noopener">Telegram</a>
-    <a data-legal="terms" href="legal/terms.ru.html" data-i18n="terms">Пользовательское соглашение</a>
-    <a data-legal="privacy" href="legal/privacy.ru.html" data-i18n="privacy">Политика конфиденциальности</a>
+    <a href="legal/terms.ru.html" data-i18n="terms">Пользовательское соглашение</a>
+    <a href="legal/privacy.ru.html" data-i18n="privacy">Политика конфиденциальности</a>
   </div>
   <p class="credits" data-i18n="credits">Фото: Wikimedia Commons, rawpixel, StockSnap (CC0).</p>
 </div></footer>
 
-<script src="i18n.js"></script>
 </body>
 </html>
