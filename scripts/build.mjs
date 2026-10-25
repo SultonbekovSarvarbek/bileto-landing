@@ -1,5 +1,5 @@
 // Собирает сайт из исходников:
-//   src/index.html + scripts/i18n.mjs  →  index.html (ru), uz/index.html, en/index.html
+//   src/index.html + scripts/i18n.mjs  →  index.html (ru), uz-latn/, uz/ (кириллица), en/
 //   docs-src/*.md                       →  legal/<doc>.<lang>.html
 //   + sitemap.xml, robots.txt
 // Запуск: node scripts/build.mjs        (с флагом --og ещё перерисует assets/og-<lang>.png через Chrome)
@@ -9,11 +9,15 @@ import { execFileSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { DICT } from './i18n.mjs';
+import { toLatin, latinize } from './translit.mjs';
 
 const SITE = (process.env.SITE_URL || 'https://bileto.uz/').replace(/\/?$/, '/');
 const TELEGRAM = 'https://t.me/bileto_uz';
-const LANGS = ['ru', 'uz', 'en'];
-const LOCALE = { ru: 'ru_RU', uz: 'uz_UZ', en: 'en_US' };
+const LANGS = ['ru', 'uz-latn', 'uz', 'en'];
+// Код языка для hreflang и <html lang>, подпись в переключателе, локаль Open Graph.
+const HREFLANG = { ru: 'ru', 'uz-latn': 'uz-Latn', uz: 'uz-Cyrl', en: 'en' };
+const LABEL = { ru: 'RU', 'uz-latn': 'UZ', uz: 'ЎЗ', en: 'EN' };
+const LOCALE = { ru: 'ru_RU', 'uz-latn': 'uz_UZ', uz: 'uz_UZ', en: 'en_US' };
 const DOCS = ['terms', 'privacy'];
 const today = new Date().toISOString().slice(0, 10);
 const year = String(new Date().getFullYear());
@@ -37,7 +41,7 @@ const plain = (s) => s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp
 
 function seoHead(lang) {
   const d = DICT[lang];
-  const alternates = LANGS.map((l) => `<link rel="alternate" hreflang="${l}" href="${homeUrl(l)}">`)
+  const alternates = LANGS.map((l) => `<link rel="alternate" hreflang="${HREFLANG[l]}" href="${homeUrl(l)}">`)
     .concat(`<link rel="alternate" hreflang="x-default" href="${homeUrl('ru')}">`);
   const faq = [1, 2, 3, 4, 5].map((i) => ({
     '@type': 'Question',
@@ -60,7 +64,7 @@ function seoHead(lang) {
         '@id': `${SITE}#website`,
         name: 'Bileto',
         url: SITE,
-        inLanguage: LANGS,
+        inLanguage: LANGS.map((l) => HREFLANG[l]),
         publisher: { '@id': `${SITE}#org` },
       },
       {
@@ -68,10 +72,10 @@ function seoHead(lang) {
         url: homeUrl(lang),
         name: d.title,
         description: d.description,
-        inLanguage: lang,
+        inLanguage: HREFLANG[lang],
         isPartOf: { '@id': `${SITE}#website` },
       },
-      { '@type': 'FAQPage', inLanguage: lang, mainEntity: faq },
+      { '@type': 'FAQPage', inLanguage: HREFLANG[lang], mainEntity: faq },
     ],
   };
   return [
@@ -88,7 +92,9 @@ function seoHead(lang) {
     `<meta property="og:image:width" content="1200">`,
     `<meta property="og:image:height" content="630">`,
     `<meta property="og:locale" content="${LOCALE[lang]}">`,
-    ...LANGS.filter((l) => l !== lang).map((l) => `<meta property="og:locale:alternate" content="${LOCALE[l]}">`),
+    ...[...new Set(Object.values(LOCALE))]
+      .filter((loc) => loc !== LOCALE[lang])
+      .map((loc) => `<meta property="og:locale:alternate" content="${loc}">`),
     `<meta name="twitter:card" content="summary_large_image">`,
     `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`,
   ].join('\n');
@@ -99,13 +105,14 @@ function buildHome(lang) {
   const root = lang === 'ru' ? '' : '../';
   const langs = LANGS.map(
     (l) =>
-      `<a href="${root + homePath(l) || './'}" hreflang="${l}" lang="${l}"${l === lang ? ' aria-current="page"' : ''}>${l.toUpperCase()}</a>`,
+      `<a href="${root + homePath(l) || './'}" hreflang="${HREFLANG[l]}" lang="${HREFLANG[l]}"${l === lang ? ' aria-current="page"' : ''}>${LABEL[l]}</a>`,
   ).join('');
   let html = template
     .replace(/^<!-- Шаблон.*-->\n/m, '')
     .replace('<!--SEO-->', seoHead(lang))
     .replace('<!--LANGS-->', langs)
     .replaceAll('{{root}}', root)
+    .replaceAll('{{htmlLang}}', HREFLANG[lang])
     .replaceAll('{{lang}}', lang)
     .replaceAll('{{year}}', year);
   if (lang !== 'ru') {
@@ -126,6 +133,7 @@ const LEGAL_UI = {
   uz: { back: 'Бош саҳифа', terms: 'Келишув', privacy: 'Махфийлик' },
   en: { back: 'Home', terms: 'Terms', privacy: 'Privacy' },
 };
+LEGAL_UI['uz-latn'] = latinize(LEGAL_UI.uz);
 
 const inline = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
@@ -151,26 +159,30 @@ function md(src) {
 }
 
 function buildLegal(doc, lang) {
-  const src = readFileSync(`docs-src/${doc}.${lang}.md`, 'utf8').trim();
+  // Латинская версия — транслитерация кириллической, отдельного файла нет.
+  const src =
+    lang === 'uz-latn'
+      ? toLatin(readFileSync(`docs-src/${doc}.uz.md`, 'utf8').trim())
+      : readFileSync(`docs-src/${doc}.${lang}.md`, 'utf8').trim();
   const title = src.match(/^# (.*)/)[1];
   const t = LEGAL_UI[lang];
   const url = (l) => `${SITE}legal/${doc}.${l}.html`;
   const home = `../${homePath(lang)}`;
   const nav = DOCS.map((x) => `<a href="${x}.${lang}.html"${x === doc ? ' aria-current="page"' : ''}>${t[x]}</a>`).join('');
   const langs = LANGS.map(
-    (l) => `<a href="${doc}.${l}.html" hreflang="${l}" lang="${l}"${l === lang ? ' aria-current="page"' : ''}>${l.toUpperCase()}</a>`,
+    (l) => `<a href="${doc}.${l}.html" hreflang="${HREFLANG[l]}" lang="${HREFLANG[l]}"${l === lang ? ' aria-current="page"' : ''}>${LABEL[l]}</a>`,
   ).join('');
   writeFileSync(
     `legal/${doc}.${lang}.html`,
     `<!doctype html>
-<html lang="${lang}">
+<html lang="${HREFLANG[lang]}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${attr(`${title}. ${DICT[lang].ogTitle}.`)}">
 <link rel="canonical" href="${url(lang)}">
-${LANGS.map((l) => `<link rel="alternate" hreflang="${l}" href="${url(l)}">`).join('\n')}
+${LANGS.map((l) => `<link rel="alternate" hreflang="${HREFLANG[l]}" href="${url(l)}">`).join('\n')}
 <meta name="theme-color" content="#0e0f13">
 <link rel="icon" href="../assets/favicon.png">
 <link rel="stylesheet" href="../styles.css">
@@ -200,11 +212,11 @@ ${alts.map(([l, href]) => `    <xhtml:link rel="alternate" hreflang="${l}" href=
     <lastmod>${today}</lastmod>
     <priority>${priority}</priority>
   </url>`;
-  const homeAlts = [...LANGS.map((l) => [l, homeUrl(l)]), ['x-default', homeUrl('ru')]];
+  const homeAlts = [...LANGS.map((l) => [HREFLANG[l], homeUrl(l)]), ['x-default', homeUrl('ru')]];
   const urls = [
     ...LANGS.map((l) => entry(homeUrl(l), homeAlts, '1.0')),
     ...DOCS.flatMap((doc) => {
-      const alts = LANGS.map((l) => [l, `${SITE}legal/${doc}.${l}.html`]);
+      const alts = LANGS.map((l) => [HREFLANG[l], `${SITE}legal/${doc}.${l}.html`]);
       return alts.map(([, href]) => entry(href, alts, '0.3'));
     }),
   ];

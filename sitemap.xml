@@ -3,7 +3,18 @@
   <url>
     <loc>https://bileto.uz/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/"/>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://bileto.uz/uz/"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/uz-latn/"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/uz/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bileto.uz/"/>
+    <lastmod>2026-10-25</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://bileto.uz/uz-latn/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/uz-latn/"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/uz/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bileto.uz/"/>
     <lastmod>2026-10-25</lastmod>
@@ -12,7 +23,8 @@
   <url>
     <loc>https://bileto.uz/uz/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/"/>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://bileto.uz/uz/"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/uz-latn/"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/uz/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bileto.uz/"/>
     <lastmod>2026-10-25</lastmod>
@@ -21,7 +33,8 @@
   <url>
     <loc>https://bileto.uz/en/</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/"/>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://bileto.uz/uz/"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/uz-latn/"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/uz/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bileto.uz/"/>
     <lastmod>2026-10-25</lastmod>
@@ -30,7 +43,17 @@
   <url>
     <loc>https://bileto.uz/legal/terms.ru.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/legal/terms.ru.html"/>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://bileto.uz/legal/terms.uz.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/legal/terms.uz-latn.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/legal/terms.uz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/legal/terms.en.html"/>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://bileto.uz/legal/terms.uz-latn.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/legal/terms.ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/legal/terms.uz-latn.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/legal/terms.uz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/legal/terms.en.html"/>
     <lastmod>2026-10-25</lastmod>
     <priority>0.3</priority>
@@ -38,7 +61,8 @@
   <url>
     <loc>https://bileto.uz/legal/terms.uz.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/legal/terms.ru.html"/>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://bileto.uz/legal/terms.uz.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/legal/terms.uz-latn.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/legal/terms.uz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/legal/terms.en.html"/>
     <lastmod>2026-10-25</lastmod>
     <priority>0.3</priority>
@@ -46,7 +70,8 @@
   <url>
     <loc>https://bileto.uz/legal/terms.en.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/legal/terms.ru.html"/>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://bileto.uz/legal/terms.uz.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/legal/terms.uz-latn.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/legal/terms.uz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/legal/terms.en.html"/>
     <lastmod>2026-10-25</lastmod>
     <priority>0.3</priority>
@@ -54,7 +79,17 @@
   <url>
     <loc>https://bileto.uz/legal/privacy.ru.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/legal/privacy.ru.html"/>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://bileto.uz/legal/privacy.uz.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/legal/privacy.uz-latn.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/legal/privacy.uz.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/legal/privacy.en.html"/>
+    <lastmod>2026-10-25</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://bileto.uz/legal/privacy.uz-latn.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/legal/privacy.ru.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/legal/privacy.uz-latn.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/legal/privacy.uz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/legal/privacy.en.html"/>
     <lastmod>2026-10-25</lastmod>
     <priority>0.3</priority>
@@ -62,7 +97,8 @@
   <url>
     <loc>https://bileto.uz/legal/privacy.uz.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/legal/privacy.ru.html"/>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://bileto.uz/legal/privacy.uz.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/legal/privacy.uz-latn.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/legal/privacy.uz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/legal/privacy.en.html"/>
     <lastmod>2026-10-25</lastmod>
     <priority>0.3</priority>
@@ -70,7 +106,8 @@
   <url>
     <loc>https://bileto.uz/legal/privacy.en.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://bileto.uz/legal/privacy.ru.html"/>
-    <xhtml:link rel="alternate" hreflang="uz" href="https://bileto.uz/legal/privacy.uz.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Latn" href="https://bileto.uz/legal/privacy.uz-latn.html"/>
+    <xhtml:link rel="alternate" hreflang="uz-Cyrl" href="https://bileto.uz/legal/privacy.uz.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bileto.uz/legal/privacy.en.html"/>
     <lastmod>2026-10-25</lastmod>
     <priority>0.3</priority>

@@ -1,4 +1,6 @@
 // Переводы лендинга. Русский текст лежит в разметке src/index.html, здесь — только его мета-теги; узбекский (кириллица, как в приложении) и английский — полностью.
+import { latinize } from './translit.mjs';
+
 export const DICT = {
   ru: {
     title: 'Bileto — купить и продать билеты на концерты в Ташкенте и Узбекистане',
@@ -96,3 +98,6 @@ export const DICT = {
     credits: 'Photos: Wikimedia Commons, rawpixel, StockSnap (CC0).',
   },
 };
+
+// Узбекская латиница — автоматически из кириллицы, чтобы версии не расходились.
+DICT['uz-latn'] = latinize(DICT.uz);
