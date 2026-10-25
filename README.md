@@ -16,10 +16,10 @@ node scripts/build.mjs          # страницы, sitemap, robots
 node scripts/build.mjs --og     # + картинки для соцсетей assets/og-*.png (нужен Google Chrome)
 ```
 
-Адрес сайта для canonical/hreflang/sitemap — по умолчанию GitHub Pages. При переезде на свой домен:
+Адрес сайта для canonical/hreflang/sitemap — `https://bileto.uz/`. Для другого адреса (например, тестового стенда):
 
 ```bash
-SITE_URL=https://bileto.uz/ node scripts/build.mjs
+SITE_URL=https://example.com/ node scripts/build.mjs
 ```
 
 ## Обновить юридические тексты
@@ -37,4 +37,4 @@ python3 -m http.server 8080
 
 ## Деплой
 
-GitHub Pages: Settings → Pages → Deploy from a branch → `main` / root.
+Сайт работает на https://bileto.uz. Сервер забирает `main` (`git pull`) и выкладывает готовые файлы без исходников (`src`, `scripts`, `docs-src`). Поэтому после правок не забудьте запустить сборку и закоммитить результат.

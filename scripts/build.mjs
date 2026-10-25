@@ -3,14 +3,14 @@
 //   docs-src/*.md                       →  legal/<doc>.<lang>.html
 //   + sitemap.xml, robots.txt
 // Запуск: node scripts/build.mjs        (с флагом --og ещё перерисует assets/og-<lang>.png через Chrome)
-// Адрес сайта: SITE_URL=https://bileto.uz/ node scripts/build.mjs
+// Другой адрес сайта (например, для тестового стенда): SITE_URL=https://example.com/ node scripts/build.mjs
 import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { DICT } from './i18n.mjs';
 
-const SITE = (process.env.SITE_URL || 'https://sultonbekovsarvarbek.github.io/bileto-landing/').replace(/\/?$/, '/');
+const SITE = (process.env.SITE_URL || 'https://bileto.uz/').replace(/\/?$/, '/');
 const TELEGRAM = 'https://t.me/bileto_uz';
 const LANGS = ['ru', 'uz', 'en'];
 const LOCALE = { ru: 'ru_RU', uz: 'uz_UZ', en: 'en_US' };
