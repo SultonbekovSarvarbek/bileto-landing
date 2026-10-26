@@ -2,7 +2,7 @@
 
 Version dated 26.10.2026
 
-This policy describes what data YODDA LLC, TIN 312338727, address: [address] (hereinafter "Bileto", "we") collects in the Bileto mobile application and website, why, and to whom we transfer it.
+This policy describes what data YODDA LLC, TIN 312338727, address: Tashkent, Uzbekistan (hereinafter "Bileto", "we") collects in the Bileto mobile application and website, why, and to whom we transfer it.
 
 We process personal data in accordance with the Law of the Republic of Uzbekistan "On Personal Data". By using the Service, you consent to the processing of your data on the terms of this policy.
 
@@ -66,7 +66,7 @@ When the period expires, the data is deleted or anonymized.
 
 You have the right to find out what data of yours we process, to correct it, to withdraw your consent and to delete your account, and also to appeal our actions to the authorized body or in court.
 
-To do so, write to [privacy@bileto.uz] from the phone number specified in your account. We will respond within [10] business days.
+To do so, write to support@bileto.uz from the phone number specified in your account. We will respond within [10] business days.
 
 Messages already sent to the Telegram operators' chat are deleted at your request together with the account.
 
@@ -81,7 +81,7 @@ We may update the policy. We will notify you of material changes in the applicat
 ## 9. Contacts
 
 YODDA LLC, TIN 312338727
-Address: [address]
-Email: [privacy@bileto.uz]
+Address: Tashkent, Uzbekistan
+Email: support@bileto.uz
 Phone: +998 94 044 45 81
 Telegram: @s_sarvar (https://t.me/s_sarvar)

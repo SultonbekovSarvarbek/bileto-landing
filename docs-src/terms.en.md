@@ -2,7 +2,7 @@
 
 Version dated 26.10.2026
 
-This agreement governs the relationship between YODDA LLC, TIN 312338727, address: [address] (hereinafter "Bileto", "we"), and users of the Bileto mobile application and website (hereinafter the "Service").
+This agreement governs the relationship between YODDA LLC, TIN 312338727, address: Tashkent, Uzbekistan (hereinafter "Bileto", "we"), and users of the Bileto mobile application and website (hereinafter the "Service").
 
 By registering, posting a listing or submitting a request, you confirm that you have read and accept this agreement and the Privacy Policy.
 
@@ -109,7 +109,7 @@ By registering, posting a listing or submitting a request, you confirm that you 
 ## 10. Contacts
 
 YODDA LLC, TIN 312338727
-Address: [address]
-Email: [support@bileto.uz]
+Address: Tashkent, Uzbekistan
+Email: support@bileto.uz
 Phone: +998 94 044 45 81
 Telegram: @s_sarvar (https://t.me/s_sarvar)
