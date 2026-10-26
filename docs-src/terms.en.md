@@ -2,7 +2,7 @@
 
 Version dated [DD.MM.YYYY]
 
-This agreement governs the relationship between [Legal entity name], TIN [TIN], address: [address] (hereinafter "Bileto", "we"), and users of the Bileto mobile application and website (hereinafter the "Service").
+This agreement governs the relationship between YODDA LLC, TIN 312338727, address: [address] (hereinafter "Bileto", "we"), and users of the Bileto mobile application and website (hereinafter the "Service").
 
 By registering, posting a listing or submitting a request, you confirm that you have read and accept this agreement and the Privacy Policy.
 
@@ -38,9 +38,9 @@ By registering, posting a listing or submitting a request, you confirm that you 
 - is genuine and lawfully belongs to them;
 - has not been sold and will not be sold to other persons, either on Bileto or anywhere else;
 - has not been cancelled, returned to the organizer or used;
-- matches the listing: event, section, row, seats, quantity.
+- matches the listing: event, quantity and description (including the seat, if stated).
 
-3.2. When posting a listing, the seller uploads a photo or screenshot of the ticket. It is seen only by Bileto operators and is not shown to buyers. Bileto may reject or remove any listing.
+3.2. When posting a listing, the seller uploads a cover — a photo or screenshot of the ticket or any other image of their choice. The cover is visible to all users. If it shows a ticket, the seller covers the QR code, barcode and any other data that would let a third party use the ticket. Bileto may reject or remove any listing.
 
 3.3. The seller chooses the ticket handover method: **delivery** (the seller delivers the ticket to the buyer) or **pickup** (the buyer collects the ticket from the seller).
 
@@ -108,7 +108,8 @@ By registering, posting a listing or submitting a request, you confirm that you 
 
 ## 10. Contacts
 
-[Legal entity name], TIN [TIN]
+YODDA LLC, TIN 312338727
 Address: [address]
 Email: [support@bileto.uz]
-Phone: [+998 ...]
+Phone: +998 94 044 45 81
+Telegram: @s_sarvar (https://t.me/s_sarvar)

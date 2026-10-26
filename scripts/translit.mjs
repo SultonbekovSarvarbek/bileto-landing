@@ -28,7 +28,8 @@ function letter(ch, prev, next) {
 export function toLatin(s) {
   let out = '';
   for (let i = 0; i < s.length; i++) out += letter(s[i], s[i - 1], s[i + 1]);
-  return out;
+  // Аббревиатура МЧЖ в латинице пишется MChJ, а не MCHJ.
+  return out.replace(/\bMCHJ\b/g, 'MChJ');
 }
 
 export const latinize = (obj) => Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, toLatin(v)]));
