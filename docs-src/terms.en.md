@@ -1,6 +1,6 @@
 # Bileto User Agreement
 
-Version dated [DD.MM.YYYY]
+Version dated 26.10.2026
 
 This agreement governs the relationship between YODDA LLC, TIN 312338727, address: [address] (hereinafter "Bileto", "we"), and users of the Bileto mobile application and website (hereinafter the "Service").
 

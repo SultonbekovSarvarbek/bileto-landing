@@ -1,6 +1,6 @@
 # Bileto Privacy Policy
 
-Version dated [DD.MM.YYYY]
+Version dated 26.10.2026
 
 This policy describes what data YODDA LLC, TIN 312338727, address: [address] (hereinafter "Bileto", "we") collects in the Bileto mobile application and website, why, and to whom we transfer it.
 
