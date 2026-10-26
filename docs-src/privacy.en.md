@@ -68,6 +68,8 @@ You have the right to find out what data of yours we process, to correct it, to 
 
 To do so, write to support@bileto.uz from the phone number specified in your account. We will respond within [10] business days.
 
+You can also delete your account yourself: Profile → Delete account. Your name and phone number are erased immediately and active listings are taken down. Requests and listings are kept for the periods in section 4 to resolve possible disputes.
+
 Messages already sent to the Telegram operators' chat are deleted at your request together with the account.
 
 ## 7. Children
